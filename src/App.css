@@ -1,0 +1,9 @@
+.text-shadow {
+	text-shadow: 0px 4px 0px #2c72b8, 0px -4px 0px #2c72b8, 4px 0px 0px #2c72b8,
+		-4px 0px 0px #2c72b8, 4px 4px 0px #2c72b8, -4px -4px 0px #2c72b8,
+		4px -4px 0px #2c72b8, -4px 4px 0px #2c72b8;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
