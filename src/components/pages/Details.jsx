@@ -24,7 +24,7 @@ function Details() {
 					pokemonDetails={pokemonDetails}
 					roundedBottom={true}
 				/>
-				<p className="text-[#FFCB05] text-4xl font-black text-center text-shadow my-[30px]">
+				<p className="text-[#FFCB05] text-8xl font-black text-center my-[30px] [-webkit-text-stroke-width:0.06em] [-webkit-text-stroke-color:#2c72b8]">
 					{`${
 						pokemonDetails &&
 						'#' + pokemonDetails.id.toString().padStart(4, '0')

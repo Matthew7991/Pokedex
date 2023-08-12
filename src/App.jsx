@@ -5,7 +5,7 @@ import Details from './components/pages/Details'
 
 function App() {
 	return (
-		<div className="bg-[#CCDADD] p-5">
+		<div className="bg-[#CCDADD] p-5 font-sans">
 			<Routes>
 				<Route
 					path="/"
