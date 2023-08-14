@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { getPokemonDetailsByID } from '../utilities/getPokemons'
+import { getPokemonDetailsByID } from '../utilities/fetchPokemonApi'
 import { useParams } from 'react-router-dom'
 import TypeItem from '../shared/TypeItem/TypeItem'
-import Header from '../shared/Header/Header'
 import PokemonImg from '../shared/PokemonImg/PokemonImg'
 
 function Details() {
@@ -19,7 +18,6 @@ function Details() {
 
 	return (
 		<>
-			<Header />
 			<section>
 				<PokemonImg
 					pokemonDetails={pokemonDetails}

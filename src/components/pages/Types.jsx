@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import pokemonLogo from '../../assets/imgs/pokemon.svg'
 import closeButtonImg from '../../assets/imgs/closeButton.svg'
-import { getPokemonTypes } from '../utilities/getPokemons'
+import { getPokemonTypes } from '../utilities/fetchPokemonApi'
 import TypeItem from '../shared/TypeItem/TypeItem'
 import { useNavigate } from 'react-router-dom'
 
@@ -16,11 +16,13 @@ function Types() {
 	return (
 		<section>
 			<div className="flex justify-between px-4">
-				<img
-					className="w-1/3"
-					src={pokemonLogo}
-					alt="pokemon Logo"
-				/>
+				<button onClick={() => navigate('/')}>
+					<img
+						className="w-1/3"
+						src={pokemonLogo}
+						alt="pokemon Logo"
+					/>
+				</button>
 				<button onClick={() => navigate('/')}>
 					<img
 						src={closeButtonImg}

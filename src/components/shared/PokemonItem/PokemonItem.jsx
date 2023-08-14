@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getPokemonDetails } from '../../utilities/getPokemons'
+import { getPokemonDetails } from '../../utilities/fetchPokemonApi'
 import PokemonImg from '../PokemonImg/PokemonImg'
 import PokemonName from '../PokemonName/PokemonName'
 

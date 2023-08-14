@@ -1,9 +1,11 @@
 import fetchResponseHandler from "./fetchResponseHandler";
 const apiLink = "https://pokeapi.co/api/v2"
 
-export default function getPokemons() {
+export function getPokemons(setData) {
   return fetch(`${apiLink}/pokemon?limit=150`)
     .then(fetchResponseHandler)
+    .then((data) => setData(data.results))
+    .catch((error) => console.error(error.message))
 }
 
 export function getPokemonDetails(link, setData) {

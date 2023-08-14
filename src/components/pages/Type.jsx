@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { getPokemonsByType } from '../utilities/getPokemons'
-import { useLocation, useParams } from 'react-router-dom'
+import { getPokemonsByType } from '../utilities/fetchPokemonApi'
+import { useParams } from 'react-router-dom'
 import PokemonList from '../shared/PokemonList/PokemonList'
-import Header from '../shared/Header/Header'
 
 function Type() {
 	const typeId = useParams().typeId
@@ -18,7 +17,6 @@ function Type() {
 
 	return (
 		<div>
-			<Header />
 			<PokemonList pokemons={pokemons} />
 		</div>
 	)

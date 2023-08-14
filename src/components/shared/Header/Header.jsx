@@ -13,11 +13,13 @@ function Header() {
 	const darkModeSwitch = useContext(DarkModeSwitch)
 	return (
 		<header>
-			<img
-				className="w-2/3 mx-auto mb-5"
-				src={pokemonImg}
-				alt=""
-			/>
+			<button onClick={() => navigate('/')}>
+				<img
+					className="w-2/3 mx-auto mb-5"
+					src={pokemonImg}
+					alt=""
+				/>
+			</button>
 			<nav className="flex justify-between gap-5 mb-5">
 				{path === '/' ? (
 					<button onClick={() => navigate('/types')}>
