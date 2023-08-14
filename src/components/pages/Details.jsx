@@ -8,6 +8,7 @@ import PokemonImg from '../shared/PokemonImg/PokemonImg'
 function Details() {
 	const pokemonId = useParams().pokemonId
 	const [pokemonDetails, setPokemonDetails] = useState(null)
+
 	useEffect(() => {
 		getPokemonDetailsByID(pokemonId, setPokemonDetails)
 	}, [])
@@ -30,7 +31,7 @@ function Details() {
 						'#' + pokemonDetails.id.toString().padStart(4, '0')
 					} ${pokemonDetails.name}`}
 				</p>
-				<div className="flex gap-8 justify-between">
+				<div className="flex justify-between gap-8">
 					{pokemonDetails.types.map((type) => (
 						<TypeItem
 							key={type.type.name}

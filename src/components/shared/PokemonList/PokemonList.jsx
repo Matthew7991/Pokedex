@@ -7,8 +7,8 @@ function PokemonList(props) {
 			{props.pokemons.map((pokemon) => {
 				return (
 					<PokemonItem
-						key={pokemon.url}
-						pokemon={pokemon}
+						key={pokemon.url || pokemon.pokemon.url}
+						pokemon={pokemon.pokemon || pokemon}
 					/>
 				)
 			})}

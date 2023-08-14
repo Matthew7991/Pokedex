@@ -89,7 +89,7 @@ function TypeItem({ type, hideBorder }) {
 	}
 	return (
 		<div
-			className={`w-fit p-2 flex-1 text-sm font-black text-white text-center rounded ${
+			className={`w-full p-2 flex-1 text-sm font-black text-white text-center rounded ${
 				hideBorder ? '' : 'border'
 			} border-black border-solid ${color}`}>
 			{type.toUpperCase()}

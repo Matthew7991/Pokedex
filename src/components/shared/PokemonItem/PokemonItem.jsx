@@ -14,8 +14,9 @@ function PokemonItem({ pokemon }) {
 	if (!pokemonDetails) {
 		return <p>loading...</p>
 	}
+
 	return (
-		<article className="w-full h-full flex flex-col justify-end">
+		<article className="flex flex-col justify-end w-full h-full">
 			<Link to={`/pokemon/${pokemonDetails.id}`}>
 				<PokemonImg pokemonDetails={pokemonDetails} />
 			</Link>
