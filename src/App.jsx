@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './components/pages/Home'
 import Details from './components/pages/Details'
@@ -11,7 +11,6 @@ export const DarkModeSwitch = createContext(null)
 
 function App() {
 	const [darkMode, setDarkMode] = useState(useContext(DarkMode))
-	const path = useLocation().pathname
 
 	const darkModeSwitch = () => {
 		setDarkMode(!darkMode)
@@ -24,23 +23,24 @@ function App() {
 					className={`${
 						!darkMode ? 'bg-[#CCDADD]' : 'bg-black'
 					} p-5 font-sans min-h-screen`}>
-					{path !== '/types' && <Header />}
 					<Routes>
-						<Route
-							path="/"
-							element={<Home />}
-						/>
-						<Route
-							path="/pokemon/:pokemonId"
-							element={<Details />}
-						/>
+						<Route element={<Header />}>
+							<Route
+								path="/"
+								element={<Home />}
+							/>
+							<Route
+								path="/pokemon/:pokemonId"
+								element={<Details />}
+							/>
+							<Route
+								path="/types/:typeId"
+								element={<Type />}
+							/>
+						</Route>
 						<Route
 							path="/types"
 							element={<Types />}
-						/>
-						<Route
-							path="/types/:typeId"
-							element={<Type />}
 						/>
 					</Routes>
 				</div>
