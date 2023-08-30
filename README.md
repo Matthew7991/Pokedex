@@ -6,7 +6,7 @@ Welcome to the Pokedex website, a platform that allows you to search for and vie
 
 - **Search:** Easily search for Pokémon by name, number, or type.
 - **Details:** View comprehensive information about each Pokémon, including its type, abilities, height, weight, and more.
-- **Responsive Design:** The website is designed to work seamlessly on various devices, ensuring a consistent user experience.
+- **Type:** Display Pokémon of a specific type.
 
 ## Demo
 
